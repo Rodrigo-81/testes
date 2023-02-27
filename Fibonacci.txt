@@ -1,0 +1,24 @@
+ent = int(input("Insira um numero inteiro positivo para verificar se consta na sequência de Fibonacci"))
+
+#inicialização da sequência
+n1, n2 = 0, 1
+cont = 0
+
+# validação de entrada
+if ent <= 0:
+   print("Informe valor inteiro positivo")
+
+else:
+   print("Sequência Fibonacci:")
+#percorrendo e exibindo sequência até valor igual ou imediatamente inferior
+   while n1 < ent:
+       print(n1)
+       aux = n1 + n2
+       n1 = n2
+       n2 = aux
+       cont += 1
+if n1 == ent:
+    print(n1)
+    print("Número",n1,"encontrado na sequência de Fibonacci!")
+elif n1 != ent:
+    print("Número não encontrado na sequência de Fibonacci!")
